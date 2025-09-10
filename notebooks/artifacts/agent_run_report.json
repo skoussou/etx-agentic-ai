@@ -1,0 +1,11 @@
+{
+  "timestamp": 1757511442,
+  "model": "llama-4-scout-17b-16e-w4a16",
+  "endpoint": "http://llamastack-with-config-service.llama-stack.svc.cluster.local:8321",
+  "sampling_params": {
+    "temperature": "0.0",
+    "max_tokens": "6000"
+  },
+  "task": "<your final user task>",
+  "final_answer": "<paste the agent\u2019s final answer or summary>"
+}
