@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: llama-stack-playground
-  namespace: openshift-policy
+  namespace: openshift-gitops
 spec:
   goTemplate: true
   generators:
@@ -24,7 +24,7 @@ spec:
       project: default
       destination:
         server: "{{.server}}"
-        namespace: openshift-policy
+        namespace: openshift-gitops
       source:
         repoURL: https://github.com/skoussou/etx-agentic-ai.git
         path: infra/applications/llama-stack-playground/overlay
