@@ -6,13 +6,18 @@ metadata:
   namespace: openshift-gitops
 spec:
   goTemplate: true
+  # generators:
+  #   - clusterDecisionResource:
+  #       configMapRef: acm-placement
+  #       labelSelector:
+  #         matchLabels:
+  #           cluster.open-cluster-management.io/placement: placement-hub-openshift
+  #       requeueAfterSeconds: 180
   generators:
-    - clusterDecisionResource:
-        configMapRef: acm-placement
-        labelSelector:
-          matchLabels:
-            cluster.open-cluster-management.io/placement: placement-hub-openshift
-        requeueAfterSeconds: 180
+  - list:
+      elements:
+      - cluster: engineering-dev
+        url: https://kubernetes.default.svc
   syncPolicy:
     preserveResourcesOnDeletion: false
   template:
