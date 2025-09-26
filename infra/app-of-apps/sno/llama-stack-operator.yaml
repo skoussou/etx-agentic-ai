@@ -28,7 +28,7 @@ spec:
     spec:
       project: default
       destination:
-        server: "{{.server}}"
+        server: "{{.url}}"
         namespace: openshift-gitops
       source:
         repoURL: https://github.com/skoussou/etx-agentic-ai.git
