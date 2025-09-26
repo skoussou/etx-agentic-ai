@@ -16,7 +16,7 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: in-cluster
+      - name: in-cluster
         url: https://kubernetes.default.svc
   syncPolicy:
     preserveResourcesOnDeletion: false
